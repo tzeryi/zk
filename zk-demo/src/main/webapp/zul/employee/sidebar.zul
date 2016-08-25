@@ -1,0 +1,7 @@
+<window id="demoWindow" apply="com.ctk.demo.zk.composer.FunctionTreeComposer">
+	<tree id="fctnTree" width="300px" height="100%">
+		<treecols>
+			<treecol label="" />
+		</treecols>
+	</tree>
+</window>
