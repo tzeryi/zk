@@ -56,12 +56,12 @@ public class FunctionTreeComposer extends SelectorComposer<Component> {
 
 		@Override
 		public void render(final Treeitem treeItem, FunctionTreeNode treeNode, int index) throws Exception {
-            FunctionTreeNode ctn = treeNode;
-            FunctionVo fctnVo = (FunctionVo) ctn.getData();
+            //FunctionTreeNode ftn = treeNode;
+            FunctionVo fctnVo = (FunctionVo) treeNode.getData();
             Treerow dataRow = new Treerow();
             dataRow.setParent(treeItem);
-            treeItem.setValue(ctn);
-            treeItem.setOpen(ctn.isOpen());
+            treeItem.setValue(treeNode);
+            treeItem.setOpen(treeNode.isOpen());
  
             if (!isCategory(fctnVo)) { // Contact Row
                 Hlayout hl = new Hlayout();
@@ -75,10 +75,8 @@ public class FunctionTreeComposer extends SelectorComposer<Component> {
                 dataRow.addEventListener(Events.ON_DOUBLE_CLICK, new EventListener<Event>() {
                     @Override
                     public void onEvent(Event event) throws Exception {
-                        FunctionTreeNode clickedNodeValue = (FunctionTreeNode) ((Treeitem) event.getTarget().getParent())
-                                .getValue();
-                        Window w = new Window("ZK IM - " + ((FunctionVo) clickedNodeValue.getData()).getName(), "normal",
-                                true);
+                        FunctionTreeNode clickedNodeValue = (FunctionTreeNode) ((Treeitem) event.getTarget().getParent()).getValue();
+                        Window w = new Window("ZK IM - " + ((FunctionVo) clickedNodeValue.getData()).getName(), "normal", true);
                         w.setPosition("parent");
                         w.setParent(demoWindow);
                         HashMap<String, String> dataArgs = new HashMap<String, String>();

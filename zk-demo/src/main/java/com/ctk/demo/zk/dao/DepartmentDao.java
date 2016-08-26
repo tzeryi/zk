@@ -20,7 +20,7 @@ public class DepartmentDao {
 	@SuppressWarnings("unchecked")
 	@Transactional(readOnly=true)
 	public List<Department> queryAll() {
-		Query query = em.createQuery("SELECT d FROM Department d");
+		Query query = em.createQuery("SELECT d FROM Department d ORDER BY deptNo");
 		List<Department> result = query.getResultList();
 		return result;
 	}

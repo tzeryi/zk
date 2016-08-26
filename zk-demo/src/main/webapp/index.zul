@@ -4,7 +4,7 @@
 		<north height="100px" border="none" >
 			<include src="/zul/employee/banner.zul"/>
 		</north>
-		<west width="260px" border="none" collapsible="true" splittable="true" minsize="300">
+		<west width="280px" border="none" collapsible="false" splittable="true" minsize="250">
 			<include src="/zul/employee/sidebar.zul"/>
 		</west>
 		<center id="mainContent" autoscroll="true" border="none">
