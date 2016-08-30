@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+	<persistence-unit name="myapp" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>com.ctk.demo.zk.mvvm.entity.Actor</class>
+		<class>com.ctk.demo.zk.mvvm.entity.ActorInfo</class>
+		<class>com.ctk.demo.zk.mvvm.entity.ActorInfoId</class>
+		<class>com.ctk.demo.zk.mvvm.entity.Address</class>
+		<class>com.ctk.demo.zk.mvvm.entity.Category</class>
+		<class>com.ctk.demo.zk.mvvm.entity.City</class>
+		<class>com.ctk.demo.zk.mvvm.entity.Country</class>
+		<class>com.ctk.demo.zk.mvvm.entity.Customer</class>
+		<class>com.ctk.demo.zk.mvvm.entity.CustomerList</class>
+		<class>com.ctk.demo.zk.mvvm.entity.CustomerListId</class>
+		<class>com.ctk.demo.zk.mvvm.entity.Film</class>
+		<class>com.ctk.demo.zk.mvvm.entity.FilmActor</class>
+		<class>com.ctk.demo.zk.mvvm.entity.FilmActorId</class>
+		<class>com.ctk.demo.zk.mvvm.entity.FilmCategory</class>
+		<class>com.ctk.demo.zk.mvvm.entity.FilmCategoryId</class>
+		<class>com.ctk.demo.zk.mvvm.entity.FilmList</class>
+		<class>com.ctk.demo.zk.mvvm.entity.FilmListId</class>
+		<class>com.ctk.demo.zk.mvvm.entity.FilmText</class>
+		<class>com.ctk.demo.zk.mvvm.entity.Inventory</class>
+		<class>com.ctk.demo.zk.mvvm.entity.Language</class>
+		<class>com.ctk.demo.zk.mvvm.entity.NicerButSlowerFilmList</class>
+		<class>com.ctk.demo.zk.mvvm.entity.NicerButSlowerFilmListId</class>
+		<class>com.ctk.demo.zk.mvvm.entity.Payment</class>
+		<class>com.ctk.demo.zk.mvvm.entity.Rental</class>
+		<class>com.ctk.demo.zk.mvvm.entity.SalesByFilmCategory</class>
+		<class>com.ctk.demo.zk.mvvm.entity.SalesByFilmCategoryId</class>
+		<class>com.ctk.demo.zk.mvvm.entity.SalesByStore</class>
+		<class>com.ctk.demo.zk.mvvm.entity.SalesByStoreId</class>
+		<class>com.ctk.demo.zk.mvvm.entity.Staff</class>
+		<class>com.ctk.demo.zk.mvvm.entity.StaffList</class>
+		<class>com.ctk.demo.zk.mvvm.entity.StaffListId</class>
+		<class>com.ctk.demo.zk.mvvm.entity.Store</class>
+
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.connection.username" value="root" />
+			<property name="hibernate.connection.password" value="123456" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true"/>
+			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/sakila" />
+			<property name="hibernate.hbm2ddl.auto" value="none" />
+		</properties>
+	</persistence-unit>
+</persistence>
