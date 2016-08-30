@@ -1,0 +1,44 @@
+<?page title="emp-mvvn" contentType="text/html;charset=UTF-8"?>
+<?link rel="stylesheet" type="text/css" href="/css/style.css"?>
+<zk>
+<window title="emp-mvvn" border="normal"
+	viewModel="@id('vm') @init('com.ctk.demo.zk.vm.EmployeeViewModel')"
+	hflex="1" vflex="1" contentStyle="overflow:auto">
+
+	<borderlayout hflex="1" vflex="1">
+		<north height="100px" border="none" >
+			<include src="/zul/employee/banner.zul"/>
+		</north>
+		<south height="50px" border="none">
+			<include src="/zul/employee/footer.zul"/>
+		</south>
+		<west vflex="1">
+			<tabbox vflex="1">
+				<tabs>
+					<tab label="Department"/>
+					<tab label="Employee"/>
+				</tabs>
+				<tabpanels>
+					<tabpanel style="overflow: auto" vflex="1">
+						<tree id="fctnTree" vflex="1" model="@bind(vm.deptModel)">
+							<treecols>
+								<treecol label="" />
+							</treecols>
+							<template name="model">
+								<treeitem>
+									<treerow>
+										<treecell label="@bind(each.name)"/>
+									</treerow>
+								</treeitem>
+							</template>
+						</tree>
+					</tabpanel>
+					<tabpanel vflex="1">
+					</tabpanel>
+				</tabpanels>
+		
+			</tabbox>
+		</west>
+	</borderlayout>
+</window>
+</zk>
