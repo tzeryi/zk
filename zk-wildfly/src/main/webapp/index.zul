@@ -1,0 +1,8 @@
+<?page title="Auto Generated index.zul"?>
+<window title="Hello World!!" border="normal" width="200px">
+<vbox apply="org.zkoss.bind.BindComposer" viewModel="@id('vm') @init('com.ctk.test.zk.vm.TestViewModel')">
+	<label value="You are using: ${desktop.webApp.version}"/>
+	<textbox value="@bind(vm.msg)"></textbox>
+	<button label="Test" onClick="@command('test')"></button>
+</vbox>
+</window>
